@@ -1,0 +1,28 @@
+1. Instalar Python 3.10 (si no está ya)
+python3 --version
+
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update && sudo apt upgrade -y
+sudo apt install python3.10 python3.10-venv python3.10-dev -y
+
+2. Crear un entorno virtual
+python3.10 -m venv BenchmarkVenv
+source VenvBenchmark/bin/activate
+
+3. Actualizar pip
+pip install --upgrade pip
+
+4. Instalar PyTorch y otras dependencias
+pip install torch transformers accelerate gputil psutil tqdm
+
+5. (Opcional) Verificar si tienes una GPU NVIDIA
+lspci | grep -i nvidia
+6. (Opcional) Instalar drivers NVIDIA y CUDA para soporte GPU
+a. Detectar drivers recomendados:
+sudo ubuntu-drivers devices
+b. Instalar automáticamente:
+sudo ubuntu-drivers autoinstall
+c. Si detecta nuevos drivers y los instala:
+sudo reboot
+
+python3 tinybenchmarkhilos.py
