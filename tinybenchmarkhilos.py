@@ -40,6 +40,8 @@ else:
 
 # Configuración estándar del benchmark
 model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+
+# Modificar con múltiplos de 2 el tamaño de batch_size para hacer más larga la prueba
 batch_size = 2
 num_batches = 50
 max_new_tokens = 10
@@ -114,5 +116,5 @@ tokens_por_segundo = total_tokens / tiempo_total
 print(f"🕒 Tiempo total (a menos, mejor): {tiempo_total:.4f} segundos")
 print(f"⚡ Inferencias por segundo (a más, mejor): {inferencias_por_segundo:.2f}")
 print(f"🔡 Tokens por segundo (a más, mejor): {tokens_por_segundo:.2f}")
-print(f"🔢 Tokens totales procesados: {total_tokens}")
+# print(f"🔢 Tokens totales procesados: {total_tokens}")
 
